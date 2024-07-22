@@ -3,19 +3,29 @@
     padding: 0;
     box-sizing: border-box;
   }
-  body {
-    background-image: url(cielo.jpeg);
-    background-size: cover;
-    background-attachment: fixed;
 
-
+  :root {
+    --fondo: #00ffea;
+    --fondtext: #0b0894;
+    --color: #000000;
+    --border-radius: 10px;
+    --fondo-card: #f700ff;
   }
+
+  body {
+    color: #000000;
+    background-image: url("Cielito.jpg");
+    object-fit: cover;
+    height: auto;
+    background-size: contain;
+    background-attachment: fixed;
+  }
+
   .header {
     padding: 45px;
-    color: rgba(255, 255, 0, 0.8);
-    background: cyan;
-    background-color: blue;
-    
+    background-color: var(--color);
+    color: var(--fondo);
+    border-radius: var(--border-radius);
   }
   
   .card {
@@ -23,10 +33,12 @@
     margin: 20px;
     border-radius: 10px;
     padding: 20px;
-    background: white;
+    background-color: var(--fondo-card);
     text-align: center;
+    border: 1px solid var(--fondo-card);
   }
-  
+
+
   .img,
   #img {
     width: 100%;
@@ -271,9 +283,11 @@
   #img-58{
     background-image: url(img/Zeno_Artwork.webp);
   }
-    .btn {
-    background: rgb(0, 247, 255);
-    color: #fff;
+    
+  .btn {
+    background-color: var(--fondo);
+    color: var(--color);
+    cursor: pointer;
     text-decoration: none;
     display: block;
     padding: 8px;
@@ -284,6 +298,17 @@
     margin-top: 20px;
   }
   
+
+  .btn:hover {
+    padding: 8px;
+    width: 150px;
+    border-radius: var(--border-radius);
+    color: var(--fondo);
+    border: 1px solid var(--fondo);
+    cursor: pointer;
+    background-color: var(--color);
+  }
+
   .contenedor {
     max-width: 1200px;
     margin: 0 auto;
@@ -296,6 +321,7 @@
   .titulo {
     font-size: 24px;
     margin: 10px 0;
+    color: var(--fondtext)
   }
   
   p {
